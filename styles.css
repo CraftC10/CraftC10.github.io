@@ -1,13 +1,108 @@
+/* Estilo para toda la Página */
 body {
-    padding-top: 56px;
+  margin: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: transform 0.3s ease-in-out; /* Agregado para el desplazamiento */
 }
 
-.container {
-    margin-top: 20px;
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
+a:hover {
+  color: #555;
+}
 
-.img-fluid {
-    max-width: 100%;
-    height: auto;
+/* Estilo para el Navbar (si lo agregas) */
+.navbar {
+  background-color: #343a40; /* Color de fondo del navbar */
+  transition: background-color 0.3s ease-in-out; /* Transición de color de fondo */
+}
+
+.navbar:hover {
+  background-color: #000; /* Nuevo color de fondo al pasar el ratón */
+}
+
+/* ... */
+
+/* Añadir un desplazamiento hacia arriba en la página */
+body[data-scroll="up"] {
+  transform: translateY(-50px); /* Puedes ajustar la cantidad de desplazamiento */
+}
+
+/* ... */
+
+/* Estilo para el Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+.footer a {
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+  color: #555;
+}
+
+/* Alineación de texto para pantallas pequeñas */
+@media (max-width: 767px) {
+  .footer {
+      text-align: center;
+  }
+
+  .footer a {
+      display: block;
+      margin-bottom: 10px;
+  }
+}
+
+/* Estilo para las tarjetas de Pricing (si las tienes) */
+.card {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+}
+
+/* Estilo para los enlaces en el contenido (si es necesario) */
+.content a {
+  color: #000;
+  transition: color 0.3s ease-in-out;
+}
+
+.content a:hover {
+  color: #555;
+}
+
+/* Media queries para responsividad */
+@media (min-width: 768px) {
+  /* Estilos específicos para pantallas de computadora */
+  body {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Estilos específicos para smartphones */
+  body {
+      font-size: 14px;
+  }
 }
